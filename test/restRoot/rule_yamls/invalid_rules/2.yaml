@@ -1,0 +1,5 @@
+# invalid, no category
+resource: aws_athena_workgroup
+severity: MEDIUM
+has:
+    - key: abc

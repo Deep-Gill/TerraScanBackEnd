@@ -1,0 +1,1 @@
+{"rule_id":"dd5200ba-5498-485c-8cd2-67f1853d13f1","rule":{"resource":"aws_security_group","category":"NETWORKING","severity":"LOW","has":[{"key":"ingress.description"}]}}

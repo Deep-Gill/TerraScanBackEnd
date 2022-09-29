@@ -1,0 +1,6 @@
+# wrong key in has
+resource: aws_athena_workgroup.main
+severity: MEDIUM
+category: GENERAL
+has:
+  - wrongKey: "configuration.result_configuration.encryption_configuration"

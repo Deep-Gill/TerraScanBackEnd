@@ -1,0 +1,1 @@
+{"rule_id":"519a5d1b-66c3-41c7-92bf-85f676ec8528","rule":{"resource":"aws_security_group","category":"NETWORKING","severity":"MEDIUM","has_not":[{"key":"ingress.cidr_blocks","value":"0.0.0.0/0"}]}}

@@ -1,0 +1,1 @@
+{"rule_id":"ec52d230-7574-4fae-a46c-9d941c2bc3cf","rule":{"resource":"aws_lb","category":"NETWORKING","severity":"LOW","has":[{"key":"enable_cross_zone_load_balancing","value":true}]}}

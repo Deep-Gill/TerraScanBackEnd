@@ -1,0 +1,10 @@
+{
+    "repoName": "yaml-rules-and-terraform-violations",
+    "branchName": "networking-t1",
+    "filePaths": [
+        "networking/JJ-a-blank-file.tf",
+        "networking/ensure-transfer-server-is-not-exposed-publicly.test.none.tf",
+        "networking/ensure-transfer-server-is-not-exposed-publicly.test.wrong-value.tf"
+    ],
+    "localPath": "/mnt/repos/yaml-rules-and-terraform-violations_networking-t1_1636516869680"
+}

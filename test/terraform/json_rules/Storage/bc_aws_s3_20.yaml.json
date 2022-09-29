@@ -1,0 +1,1 @@
+{"rule_id":"29656c58-cd34-44d5-8696-2ae741bb4581","rule":{"resource":"aws_s3_bucket_public_access_block","category":"STORAGE","severity":"MEDIUM","has":[{"key":"block_public_policy","value":true}]}}

@@ -1,0 +1,1 @@
+{"rule_id":"53f65bc7-283d-4dc7-9fc8-14eb2ee901cb","rule":{"resource":"aws_cloudfront_distribution","category":"NETWORKING","severity":"MEDIUM","has":[{"key":"default_cache_behavior.viewer_protocol_policy","range":["redirect-to-https","https-only"]}]}}

@@ -1,0 +1,29 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "pguser",
+      "environmentVariableName": "PGUSER"
+    },
+    {
+      "cloudFormationParameterName": "pghost",
+      "environmentVariableName": "PGHOST"
+    },
+    {
+      "cloudFormationParameterName": "pgpassword",
+      "environmentVariableName": "PGPASSWORD"
+    },
+    {
+      "cloudFormationParameterName": "pgport",
+      "environmentVariableName": "PGPORT"
+    },
+    {
+      "cloudFormationParameterName": "pgdatabase",
+      "environmentVariableName": "PGDATABASE"
+    },
+    {
+      "cloudFormationParameterName": "jwtSecret",
+      "environmentVariableName": "JWT_SECRET"
+    }
+  ]
+}

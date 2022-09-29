@@ -1,0 +1,6 @@
+resource: aws_transfer_server
+severity: HIGH
+category: LOGGING
+has_not:
+  - key: "configuration.result_configuration.encryption_configuration"
+    value: true

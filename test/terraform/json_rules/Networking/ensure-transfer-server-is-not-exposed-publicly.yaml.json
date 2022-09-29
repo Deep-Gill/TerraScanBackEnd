@@ -1,0 +1,1 @@
+{"rule_id":"1c2852f7-9f61-4981-ab84-84840fdb79d2","rule":{"resource":"aws_transfer_server","category":"NETWORKING","severity":"MEDIUM","has":[{"key":"endpoint_type","value":"VPC"}]}}

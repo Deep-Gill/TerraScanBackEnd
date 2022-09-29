@@ -1,0 +1,1 @@
+{"rule_id":"578e7668-f557-4417-b6b9-789b1c76df96","rule":{"resource":"aws_elb","category":"LOGGING","severity":"HIGH","has":[{"key":"access_logs.enabled","value":true}]}}

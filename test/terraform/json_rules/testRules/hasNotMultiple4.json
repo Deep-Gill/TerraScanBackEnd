@@ -1,0 +1,18 @@
+{"rule_id":"hfug64859fjd", "rule": {
+    "resource": "aws_mq_broker",
+    "severity": "HIGH",
+    "category": "PUBLIC",
+    "has_not": [
+      {
+        "key": "engine_type",
+        "value": "ActiveMQ"
+      },
+      {
+        "key": "user.username"
+      },
+      {
+        "key": "configuration.revision"
+      }
+    ]
+  }
+}

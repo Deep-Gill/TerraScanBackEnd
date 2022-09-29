@@ -1,0 +1,6 @@
+resource: aws_s3_bucket.data
+category: STORAGE
+severity: CRITICAL
+has_not:
+  - key: "acl"
+    value: "public-write"

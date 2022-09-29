@@ -1,0 +1,6 @@
+# invalid resource name
+resource: not_starting_with_aws
+severity: MEDIUM
+category: GENERAL
+has_not:
+    - key: abc"

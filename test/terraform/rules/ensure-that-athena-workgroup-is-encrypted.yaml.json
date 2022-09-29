@@ -1,0 +1,1 @@
+{"rule_id":"22944bad-7f71-4154-8a31-ba8afd57f848","rule":{"resource":"aws_athena_workgroup","severity":"MEDIUM","category":"GENERAL","has":[{"key":"configuration.result_configuration.encryption_configuration"}]}}

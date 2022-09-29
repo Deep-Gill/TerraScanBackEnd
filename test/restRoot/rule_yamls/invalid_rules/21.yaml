@@ -1,0 +1,7 @@
+# extra property in has
+resource: aws_athena_workgroup.main
+severity: MEDIUM
+category: GENERAL
+has:
+  - key: abc
+    key2: abc

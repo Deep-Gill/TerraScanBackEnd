@@ -1,0 +1,5 @@
+resource: aws_codebuild_project.main
+severity: MEDIUM
+category: GENERAL
+has_not:
+  - key: "configuration.result_configuration.encryption_configuration"

@@ -1,0 +1,6 @@
+resource: aws_elb
+category: LOGGING
+severity: HIGH
+has:
+  - key: "access_logs.enabled"
+    value: true

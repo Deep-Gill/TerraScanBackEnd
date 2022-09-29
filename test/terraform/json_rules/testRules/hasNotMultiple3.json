@@ -1,0 +1,20 @@
+{"rule_id":"sdfasdfg123432","rule": {
+    "resource": "aws_codebuild_project",
+    "severity": "MEDIUM",
+    "category": "GENERAL",
+    "has_not": [
+      {
+        "key": "description",
+        "value": "invalid"
+      },
+      {
+        "key": "name",
+        "value": "test"
+      },
+      {
+        "key": "build_timeout",
+        "value": "10"
+      }
+    ]
+  }
+}

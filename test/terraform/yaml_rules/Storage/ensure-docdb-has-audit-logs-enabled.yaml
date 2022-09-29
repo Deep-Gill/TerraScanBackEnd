@@ -1,0 +1,8 @@
+resource: aws_docdb_cluster_parameter_group
+category: STORAGE
+severity: LOW
+has:
+  - key: "parameter.name"
+    value: "audit_logs"
+  - key: "parameter.value"
+    value: "enabled"

@@ -1,0 +1,10 @@
+# both value and range in has
+resource: aws_athena_workgroup.main
+severity: MEDIUM
+category: GENERAL
+has:
+  - key: abc
+    value: abc
+    range:
+      - 1
+      - 2

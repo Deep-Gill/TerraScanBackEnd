@@ -1,0 +1,1 @@
+{"rule_id":"4e432735-ad8f-42a3-966f-6674a1666ee0","rule":{"resource":"aws_s3_bucket.data","category":"STORAGE","severity":"CRITICAL","has_not":[{"key":"acl","value":"public-write"}]}}

@@ -1,0 +1,1 @@
+{"rule_id":"f98d7b40-da0d-470c-9ce3-4189d4d41d73","rule":{"resource":"aws_docdb_cluster_parameter_group","category":"STORAGE","severity":"LOW","has":[{"key":"parameter.name","value":"audit_logs"},{"key":"parameter.value","value":"enabled"}]}}

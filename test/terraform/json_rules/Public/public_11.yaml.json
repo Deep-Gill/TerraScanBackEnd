@@ -1,0 +1,1 @@
+{"rule_id":"ba50c6e4-0fcf-423b-817f-8f48f0b93856","rule":{"resource":"aws_mq_broker","severity":"HIGH","category":"PUBLIC","has":[{"key":"publicly_accessible","value":true}]}}

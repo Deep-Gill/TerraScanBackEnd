@@ -1,0 +1,17 @@
+{"rule_id":"dgsdfgsdfg","rule": {
+    "resource": "aws_codebuild_project",
+    "severity": "MEDIUM",
+    "category": "GENERAL",
+    "has_not": [
+      {
+        "key": "name"
+      },
+      {
+        "key": "key_that_is_not_there"
+      },
+      {
+        "key": "description"
+      }
+    ]
+  }
+}

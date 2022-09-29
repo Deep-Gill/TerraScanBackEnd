@@ -1,0 +1,6 @@
+resource: aws_s3_bucket_public_access_block
+severity: MEDIUM
+category: STORAGE
+has:
+  - key: "block_public_policy"
+    value: true

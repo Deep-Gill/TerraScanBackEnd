@@ -1,0 +1,5 @@
+# invalid, no resource
+severity: MEDIUM
+category: GENERAL
+has_not:
+    - key: abc

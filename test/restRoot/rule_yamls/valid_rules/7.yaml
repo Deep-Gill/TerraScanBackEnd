@@ -1,0 +1,9 @@
+resource: aws_mq_broker
+severity: CRITICAL
+category: PUBLIC
+has:
+  - key: "configuration.result_configuration.encryption_configuration"
+    range: [1, 4]
+  - key: 'abc'
+    value: true
+  - key: 'def'

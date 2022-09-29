@@ -1,0 +1,4 @@
+# invalid, no has or hasNot
+resource: aws_athena_workgroup
+severity: MEDIUM
+category: GENERAL

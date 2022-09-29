@@ -1,0 +1,6 @@
+# has is not an array 
+resource: aws_athena_workgroup
+severity: MEDIUM
+category: GENERAL
+has: 
+  key: "configuration.result_configuration.encryption_configuration"

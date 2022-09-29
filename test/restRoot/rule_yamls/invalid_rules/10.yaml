@@ -1,0 +1,6 @@
+# wrong type in category
+resource: aws_athena_workgroup
+severity: MEDIUM
+category: 0
+has_not:
+    - key: abc

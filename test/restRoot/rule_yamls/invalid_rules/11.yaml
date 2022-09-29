@@ -1,0 +1,6 @@
+# wrong type in resource
+resource: 0
+severity: MEDIUM
+category: GENERAL
+has_not:
+    - key: abc

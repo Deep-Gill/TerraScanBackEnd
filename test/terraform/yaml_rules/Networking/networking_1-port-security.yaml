@@ -1,0 +1,8 @@
+resource: aws_security_group
+category: NETWORKING
+severity: MEDIUM
+has_not:
+  - key: "ingress.cidr_blocks"
+    value: "0.0.0.0/0"
+
+   

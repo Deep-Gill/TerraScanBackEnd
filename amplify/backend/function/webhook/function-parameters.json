@@ -1,0 +1,21 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "ghPersonalAccessToken",
+      "environmentVariableName": "ghPersonalAccessToken"
+    },
+    {
+      "cloudFormationParameterName": "efsPath",
+      "environmentVariableName": "efsPath"
+    },
+    {
+      "cloudFormationParameterName": "isRemote",
+      "environmentVariableName": "isRemote"
+    },
+    {
+      "cloudFormationParameterName": "secret",
+      "environmentVariableName": "secret"
+    }
+  ]
+}

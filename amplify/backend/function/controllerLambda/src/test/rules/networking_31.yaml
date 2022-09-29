@@ -1,0 +1,5 @@
+resource: aws_security_group
+severity: LOW
+category: NETWORKING
+has:
+  - key: "ingress.description"

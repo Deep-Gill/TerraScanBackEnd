@@ -1,0 +1,6 @@
+resource: aws_mq_broker
+severity: HIGH
+category: PUBLIC
+has:
+  - key: "publicly_accessible"
+    value: true

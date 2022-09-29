@@ -1,0 +1,8 @@
+{
+    "httpMethod": "POST",
+    "body": "{\"cmd\":\"tree -L 2\"}",
+    "path": "/apiWebhook/sh",
+    "headers": {
+        "content-type": "application/json"
+    }
+}

@@ -1,0 +1,6 @@
+resource: aws_cloudfront_distribution
+category: NETWORKING
+severity: MEDIUM
+has:
+  - key: "default_cache_behavior.viewer_protocol_policy"
+    range: ["redirect-to-https", "https-only"]

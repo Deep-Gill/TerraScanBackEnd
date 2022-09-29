@@ -1,0 +1,6 @@
+# wrong type in severity
+resource: aws_athena_workgroup.test
+severity: 0
+category: GENERAL
+has_not:
+    - key: abc

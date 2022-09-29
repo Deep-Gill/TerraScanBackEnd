@@ -1,0 +1,17 @@
+{"rule_id":"9fd47fdffd3fsdfsdf","rule": {
+    "resource": "aws_codebuild_project",
+    "severity": "MEDIUM",
+    "category": "GENERAL",
+    "has_not": [
+      {
+        "key": "description"
+      },
+      {
+        "key": "name"
+      },
+      {
+        "key": "build_timeout"
+      }
+    ]
+  }
+}

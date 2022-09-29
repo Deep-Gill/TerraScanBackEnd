@@ -1,0 +1,151 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "required": [
+        "resource",
+        "severity",
+        "category"
+    ],
+    "oneOf": [
+        {
+            "required": [
+                "has"
+            ]
+        },
+        {
+            "required": [
+                "has_not"
+            ]
+        }
+    ],
+    "properties": {
+        "resource": {
+            "$id": "#/properties/resource",
+            "type": "string",
+            "pattern": "^aws_\\w+\\.?\\w+$",
+            "title": "The resource schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+        },
+        "severity": {
+            "$id": "#/properties/severity",
+            "type": "string",
+            "enum": ["MEDIUM", "LOW", "CRITICAL", "HIGH"],
+            "title": "The severity schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+        },
+        "category": {
+            "$id": "#/properties/category",
+            "type": "string",
+            "enum": ["GENERAL", "IAM", "MONITORING", "LOGGING", "NETWORKING", "PUBLIC", "SECRETS", "STORAGE",
+                     "SERVERLESS", "KUBERNETES", "ELASTICSEARCH", "DRIFT"],
+            "title": "The category schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+        },
+        "has": {
+            "$id": "#/properties/has",
+            "type": "array",
+            "title": "The has schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "additionalItems": true,
+            "minItems": 1,
+            "items": {
+                "$id": "#/properties/has/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/has/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "required": [
+                            "key"
+                        ],
+                        "not": { "required": ["value", "range"] },
+                        "properties": {
+                            "key": {
+                                "$id": "#/properties/has/items/anyOf/0/properties/key",
+                                "type": "string",
+                                "title": "The key schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": ""
+                            },
+                            "value": {
+                                "$id": "#/properties/has/items/anyOf/0/properties/value",
+                                "type": ["boolean", "string", "integer"],
+                                "title": "The value schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": ""
+                            },
+                            "range": {
+                                "$id": "#/properties/has/items/anyOf/0/properties/range",
+                                "type": "array",
+                                "title": "The range schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": ""
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                ]
+            }
+        },
+        "has_not": {
+            "$id": "#/properties/has_not",
+            "type": "array",
+            "title": "The has_not schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "additionalItems": true,
+            "minItems": 1,
+            "items": {
+                "$id": "#/properties/has_not/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/has_not/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "required": [
+                            "key"
+                        ],
+                        "not": { "required": ["value", "range"] },
+                        "properties": {
+                            "key": {
+                                "$id": "#/properties/has/items/anyOf/0/properties/key",
+                                "type": "string",
+                                "title": "The key schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": ""
+                            },
+                            "value": {
+                                "$id": "#/properties/has/items/anyOf/0/properties/value",
+                                "type": ["boolean", "string", "integer"],
+                                "title": "The value schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": ""
+                            },
+                            "range": {
+                                "$id": "#/properties/has/items/anyOf/0/properties/range",
+                                "type": "array",
+                                "title": "The range schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": ""
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": false
+}

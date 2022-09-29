@@ -1,0 +1,7 @@
+resource: aws_s3_bucket
+category: STORAGE
+severity: MEDIUM
+has:
+  - key: "logging"
+
+  

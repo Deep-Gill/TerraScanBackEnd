@@ -1,0 +1,11 @@
+# wrong key in has (more than one element)
+resource: aws_athena_workgroup
+severity: MEDIUM
+category: GENERAL
+has:
+  - key: "abc"
+  - key: "def"
+    value: true
+  - wrongKey: "configuration.result_configuration.encryption_configuration"
+  - key: "ghi"
+    range: [true, false]

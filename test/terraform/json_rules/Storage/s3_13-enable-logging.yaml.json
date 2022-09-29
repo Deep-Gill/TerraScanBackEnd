@@ -1,0 +1,1 @@
+{"rule_id":"d4eff02d-ce36-450f-b786-c8590d6937f9","rule":{"resource":"aws_s3_bucket","category":"STORAGE","severity":"MEDIUM","has":[{"key":"logging"}]}}

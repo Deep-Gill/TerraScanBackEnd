@@ -1,0 +1,6 @@
+resource: aws_elb
+severity: LOW
+category: STORAGE
+has:
+  - key: "configuration.result_configuration.encryption_configuration"
+    value: true

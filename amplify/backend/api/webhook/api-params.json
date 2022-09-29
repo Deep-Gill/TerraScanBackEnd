@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/apiWebhook",
+      "lambdaFunction": "webhook",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/apiWebhook"
+    }
+  ],
+  "resourceName": "webhook",
+  "apiName": "webhook",
+  "functionArns": [
+    {
+      "lambdaFunction": "webhook"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-terrascanbackend-dev-183832-authRole",
+    "unAuthRoleName": "amplify-terrascanbackend-dev-183832-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "webhook",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

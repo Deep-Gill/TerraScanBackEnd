@@ -1,0 +1,6 @@
+resource: aws_transfer_server
+severity: MEDIUM
+category: NETWORKING
+has:
+  - key: "endpoint_type"
+    value: "VPC"

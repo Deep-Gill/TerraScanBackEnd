@@ -1,0 +1,17 @@
+{
+    "repoName": "LinlinlinlinW",
+    "repoURL": "https://github.com/LinlinlinlinWhttps://github.com/LinlinlinlinW",
+    "violations": [
+        {
+            "fileName": "file name 1",
+            "lineNumber": "2",
+            "ruleId": "1234567890"
+        },
+        {
+            "fileName": "file name 2",
+            "lineNumber": "98",
+            "ruleId": "0987654321d"
+        }
+    ],
+    "emailReceivers": ["wangbolin9827@gmail.com"]
+}

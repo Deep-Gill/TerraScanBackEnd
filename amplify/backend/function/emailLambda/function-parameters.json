@@ -1,0 +1,13 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "appLink",
+      "environmentVariableName": "appLink"
+    },
+    {
+      "cloudFormationParameterName": "emailSender",
+      "environmentVariableName": "emailSender"
+    }
+  ]
+}

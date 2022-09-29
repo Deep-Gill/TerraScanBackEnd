@@ -1,0 +1,18 @@
+# general
+INTERNAL_SERVER_ERROR: An internal server issue occurred while processing your request.
+NOT_IMPLEMENTED: Endpoint not implemented.
+MISSING_PARAMETERS: One or more required parameters were missing.
+INVALID_PARAMETERS: One or more of the parameters passed are invalid.
+
+# user creation
+DUPLICATE_USER: A user already exists with either this email or GitHub username.
+INVALID_EMAIL: The email provided did not pass validation.
+
+# user login
+WRONG_EMAIL: This email does not have an account associated to it.
+WRONG_PASSWORD: The password entered is incorrect.
+JWT_ERROR: Something seems wrong with the JWT you provided. Please log in again.
+
+# rule creation
+INVALID_YAML: The string passed as yaml_file is not a valid YAML file.
+INVALID_RULE: The rule passed does not conform to the schema.

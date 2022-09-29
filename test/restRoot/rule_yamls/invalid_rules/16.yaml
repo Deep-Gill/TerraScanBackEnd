@@ -1,0 +1,5 @@
+# has_not has an empty array
+resource: aws_athena_workgroup
+severity: MEDIUM
+category: GENERAL
+has_not: []

@@ -1,0 +1,51 @@
+{
+    "name": "terrascanbackend",
+    "version": "1.0.0",
+    "description": "A Terraform File Violation Scanner",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint . --ext .js --fix",
+        "webhook": "cd amplify/backend/function/webhook/src/ && export $(grep -v '^#' .env | xargs) && node app.js",
+        "webhook:mock:github": "amplify mock function webhook --event src/event-github.json",
+        "webhook:mock:sh": "amplify mock function webhook --event src/event-sh.json",
+        "webhook:mock:catfact": "amplify mock function webhook --event src/event-catfact.json",
+        "webhook:install": "cd amplify/backend/function/webhook/src/ && yarn install",
+        "restRoot": "node amplify/backend/function/restRoot/src/app.js",
+        "restRoot:install": "cd amplify/backend/function/restRoot/src/ && yarn install",
+        "test": "nyc --reporter=html mocha --reporter mochawesome test/**/*.spec.js --exit",
+        "testParse": "mocha test/terraform/parsing.spec.js --exit",
+        "testValidate": "mocha test/terraform/validating.spec.js --exit",
+        "email:mock:harry": "amplify mock function emailLambda --event src/event-harry.json",
+        "email:mock:bolin": "amplify mock function emailLambda --event src/event-bolin.json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CPSC-319/TerraScanBackEnd.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/CPSC-319/TerraScanBackEnd/issues"
+    },
+    "homepage": "https://github.com/CPSC-319/TerraScanBackEnd#readme",
+    "devDependencies": {
+        "aws-sdk": "^2.1037.0",
+        "chai-spies": "^1.0.0",
+        "eslint": "^7.32.0"
+    },
+    "dependencies": {
+        "chai": "^4.3.4",
+        "chai-as-promised": "^7.1.1",
+        "chai-http": "^4.3.0",
+        "email-validator": "^2.0.4",
+        "glob": "^7.2.0",
+        "hcl-to-json": "^0.1.1",
+        "jsonwebtoken": "^8.5.1",
+        "mocha": "^9.1.3",
+        "mochawesome": "^7.0.1",
+        "nock": "^13.2.0",
+        "nyc": "^15.1.0",
+        "pg": "^8.7.1",
+        "yaml": "^1.10.2"
+    }
+}

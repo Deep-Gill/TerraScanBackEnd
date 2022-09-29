@@ -1,0 +1,6 @@
+resource: aws_security_group
+severity: LOW
+category: SECRETS
+has_not:
+  - key: "configuration.result_configuration.encryption_configuration"
+    range: [1, 4]

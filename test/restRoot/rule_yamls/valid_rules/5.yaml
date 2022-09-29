@@ -1,0 +1,6 @@
+resource: aws_transfer_server.test
+severity: MEDIUM
+category: PUBLIC
+has:
+  - key: "configuration.result_configuration.encryption_configuration"
+    range: [true, false]

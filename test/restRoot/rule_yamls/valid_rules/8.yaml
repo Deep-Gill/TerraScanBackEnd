@@ -1,0 +1,9 @@
+resource: aws_mq_broker.data
+severity: HIGH
+category: STORAGE
+has_not:
+  - key: "configuration.result_configuration.encryption_configuration"
+    range: [1, 4]
+  - key: 'abc'
+    value: true
+  - key: 'def'

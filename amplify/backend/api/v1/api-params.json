@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/v1",
+      "lambdaFunction": "restRoot",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/v1"
+    }
+  ],
+  "resourceName": "v1",
+  "apiName": "v1",
+  "functionArns": [
+    {
+      "lambdaFunction": "restRoot"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-terrascanbackend-dev-183832-authRole",
+    "unAuthRoleName": "amplify-terrascanbackend-dev-183832-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "restRoot",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

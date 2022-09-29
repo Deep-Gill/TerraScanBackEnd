@@ -1,0 +1,6 @@
+resource: aws_lb
+category: NETWORKING
+severity: LOW
+has:
+  - key: "enable_cross_zone_load_balancing"
+    value: true
