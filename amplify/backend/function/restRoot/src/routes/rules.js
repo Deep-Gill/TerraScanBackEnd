@@ -12,7 +12,9 @@ const pool = require('../db')
 const YAML = require('yaml')
 
 router.get('/', auth.requireAuthenticated, auth.requireAdmin, (req, res) => {
-    pool.query('SELECT id, description, created, last_modified, severity, category, enabled FROM rules')
+    pool.query(
+        'SELECT id, description, created, last_modified, severity, category, enabled FROM rules'
+    )
         .then((result) => {
             for (const row of result.rows) {
                 row.yaml_file = YAML.stringify(row.yaml_file)
@@ -26,7 +28,7 @@ router.get('/', auth.requireAuthenticated, auth.requireAdmin, (req, res) => {
         })
 })
 
-router.get('/:id', auth.requireAuthenticated, auth.requireAdmin, (req, res) => {
+router.get('/:id', auth.requireAuthenticated, (req, res) => {
     pool.query('SELECT * FROM rules WHERE id = $1', [req.params.id])
         .then((result) => {
             for (const row of result.rows) {
@@ -41,16 +43,25 @@ router.get('/:id', auth.requireAuthenticated, auth.requireAdmin, (req, res) => {
         })
 })
 
-router.delete('/:id', auth.requireAuthenticated, auth.requireAdmin, (req, res) => {
-    pool.query('DELETE FROM rules WHERE id = $1', [req.params.id])
-        .then(() => {
-            res.status(200).send()
-        })
-        .catch(() => {
-            res.status(500)
-            res.json(errorResponse('INTERNAL_SERVER_ERROR'))
-        })
-})
+router.delete(
+    '/:id',
+    auth.requireAuthenticated,
+    auth.requireAdmin,
+    (req, res) => {
+        pool.query('DELETE FROM violations WHERE rule_id = $1', [req.params.id])
+            .then(() => {
+                pool.query('DELETE FROM rules WHERE id = $1', [
+                    req.params.id,
+                ]).then(() => {
+                    res.status(200).send()
+                })
+            })
+            .catch(() => {
+                res.status(500)
+                res.json(errorResponse('INTERNAL_SERVER_ERROR'))
+            })
+    }
+)
 
 router.post('/', auth.requireAuthenticated, auth.requireAdmin, (req, res) => {
     // check for necessary parameters
@@ -65,7 +76,9 @@ router.post('/', auth.requireAuthenticated, auth.requireAdmin, (req, res) => {
 
         const validation = validate(yaml_file, schema)
         if (!validation.valid) {
-            res.status(400).json(errorResponse('INVALID_RULE', validation.errors))
+            res.status(400).json(
+                errorResponse('INVALID_RULE', validation.errors)
+            )
             return
         }
 
@@ -77,9 +90,19 @@ router.post('/', auth.requireAuthenticated, auth.requireAdmin, (req, res) => {
             CRITICAL: 3,
         }
 
+        let desc = req.body.description.trim()
+        if (yaml_file.description) {
+            desc = yaml_file.description
+        }
+
         pool.query(
             'INSERT INTO rules (description, yaml_file, severity, category) VALUES ($1, $2, $3, $4) RETURNING id',
-            [req.body.description.trim(), JSON.stringify(yaml_file), severityEnum[yaml_file.severity], yaml_file.category]
+            [
+                desc,
+                JSON.stringify(yaml_file),
+                severityEnum[yaml_file.severity],
+                yaml_file.category,
+            ]
         )
             .then((dbres) => {
                 res.status(201).json({ id: dbres.rows[0].id })
@@ -97,9 +120,10 @@ router.put(
     auth.requireAuthenticated,
     auth.requireAdmin,
     (req, res) => {
-        pool.query('UPDATE rules SET enabled = true, last_modified = NOW() WHERE id = $1', [
-            req.params.id,
-        ])
+        pool.query(
+            'UPDATE rules SET enabled = true, last_modified = NOW() WHERE id = $1',
+            [req.params.id]
+        )
             .then((dbres) => {
                 res.status(200).send()
             })
@@ -114,9 +138,10 @@ router.put(
     auth.requireAuthenticated,
     auth.requireAdmin,
     (req, res) => {
-        pool.query('UPDATE rules SET enabled = false, last_modified = NOW() WHERE id = $1', [
-            req.params.id,
-        ])
+        pool.query(
+            'UPDATE rules SET enabled = false, last_modified = NOW() WHERE id = $1',
+            [req.params.id]
+        )
             .then((dbres) => {
                 res.status(200).send()
             })

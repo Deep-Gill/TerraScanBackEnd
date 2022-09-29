@@ -18,7 +18,7 @@ function writeToEFS(event, result) {
 
 exports.handler = async (event) => {
     // TODO: remove after testing
-    //let event2 = JSON.parse(JSON.stringify(event))
+    // let event2 = JSON.parse(JSON.stringify(event))
     console.log(event)
     const filepath = event.filePath
     const rulesDir = event.prInfo.repoPath + '/rules'
@@ -26,21 +26,13 @@ exports.handler = async (event) => {
     const resultFixed = []
     const deletedResources = []
     let status
-    let skip = false
     try {
         const resources = TerraformToJSON(filepath)
         const resultObj = fixJob(event)
         if (resultObj) {
-            removeDeletedResourcesFromResults(resources, resultObj, deletedResources, event)
+            removeDeletedResourcesFromResults(resources, resultObj, deletedResources)
         }
-        if (resources === undefined && deletedResources.length === 0) {
-            throw new Error('There are no resources in file')
-        } else if (resources === undefined) {
-            skip = true
-        }
-        if (!skip) {
-            ruleHandler(rulesDir, resources, result, event, resultObj, resultFixed)
-        }
+        ruleHandler(rulesDir, resources, result, event, resultObj, resultFixed)
         for (const violation of result) {
             const lineNumber = await getLineNumber(violation.file_path, violation.resource_name, violation.resource_desc)
             violation.line_number = lineNumber
@@ -70,7 +62,7 @@ exports.handler = async (event) => {
     }
 }
 
-function removeDeletedResourcesFromResults(resources, result, deletedResources, event) {
+function removeDeletedResourcesFromResults(resources, result, deletedResources) {
     let results = result.results
     let numOfResults = results.length
     for (let i = 0; i < numOfResults; i++) {
@@ -78,10 +70,7 @@ function removeDeletedResourcesFromResults(resources, result, deletedResources, 
         let name = results[i].resource_desc
         let res = type + '.' + name
         let rule = { resource: res }
-        let isResInFile = null
-        if (resources !== undefined) {
-            isResInFile = isResourceInFile(rule, resources)
-        }
+        let isResInFile = isResourceInFile(rule, resources)
         if (!isResInFile) {
             let resource = JSON.parse(JSON.stringify(results[i]))
             resource.fixed = true 
@@ -287,6 +276,9 @@ function violationAdder(name, type, event, ruleObj, result, fixed, violID, resul
 function TerraformToJSON(filepath) {
     const terraformFile = fs.readFileSync(filepath, { encoding: 'utf-8' })
     const result = hcltojson(terraformFile)
+    if (result.resource === undefined) {
+        throw new Error('No Resources found in terraform file')
+    }
     return result.resource
 }
 

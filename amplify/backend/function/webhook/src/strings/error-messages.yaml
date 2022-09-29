@@ -1,5 +1,6 @@
 NOT_AUTHORIZED: "Invalid Signature"
-UNSUPPORTED_EVENTS_OR_ACTIONS: "Invalid Event or Action"
+UNSUPPORTED_ACTIONS: "Invalid Github Webhook Event Action"
+UNSUPPORTED_EVENTS: "Invalid Github Webhook Event. We are only supporting Pull Requests"
 MISSING_PARAMS: "Missing one or more parameters"
 EXCEED_GITHUB_TREE_LIMIT: "The number of items in the tree exceeded GitHub maximum limit"
 PULL_REQUEST_FOLDER_ALREADY_EXISTS: "The Pull Request Folder Already exists"

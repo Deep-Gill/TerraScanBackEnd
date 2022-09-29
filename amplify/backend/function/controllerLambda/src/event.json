@@ -1,10 +1,28 @@
-{
-    "repoName": "yaml-rules-and-terraform-violations",
-    "branchName": "networking-t1",
-    "filePaths": [
-        "networking/JJ-a-blank-file.tf",
-        "networking/ensure-transfer-server-is-not-exposed-publicly.test.none.tf",
-        "networking/ensure-transfer-server-is-not-exposed-publicly.test.wrong-value.tf"
-    ],
-    "localPath": "/mnt/repos/yaml-rules-and-terraform-violations_networking-t1_1636516869680"
+{"action": "synchronize",
+"repoName":"CPSC-319/TerraScanTestData",
+"branchName":"General-t1-Synchronized",
+"prUrl":"https://github.com/CPSC-319/TerraScanTestData/pull/5",
+"prAuthor":"HryChg",
+"prHeadSha":"4aee1921d50764c6430e7af64dd81e2b3345f60c",
+"filePaths":["arthur/general/ensure-that-athena-workgroup-is-encrypted.test.tf",
+    "data/certificate.tf",
+    "data/data.tf",
+    "data/main.tf",
+    "data/outputs.tf",
+    "data/subDir1/api_gateway_config.tf",
+    "data/subDir1/api_gateway_resources.tf",
+    "data/subDir2/permissions.tf",
+    "data/subDir2/route53.tf",
+    "data/subDir2/variables.tf",
+    "modifiedData/certificate.tf",
+    "modifiedData/data.tf",
+    "modifiedData/main.tf",
+    "modifiedData/outputs.tf",
+    "modifiedData/subDir1/api_gateway_config.tf",
+    "modifiedData/subDir1/api_gateway_resources.tf",
+    "modifiedData/subDir2/permissions.tf",
+    "modifiedData/subDir2/route53.tf",
+    "modifiedData/subDir2/variables.tf"],
+    "localPath":"/mnt/repos/CPSC-319_TerraScanTestData_5/files",
+    "date":"Sun Nov 28 2021 10:32:55 GMT+0000 (Coordinated Universal Time)"
 }

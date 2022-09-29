@@ -1,0 +1,19 @@
+{
+    "status": "VIOLATION",
+    "results": [
+        {
+            "repo_name": "CPSC-319/yaml-rules-and-terraform-violations",
+            "pull_url": "https://github.com/CPSC-319/yaml-rules-and-terraform-violations/pull/50",
+            "file_path": "/mnt/repos/yaml-rules-and-terraform-violations_general-t2_1637889884402/general/ensure-that-codebuild-projects-are-encrypted.test.tf",
+            "line_number": 1,
+            "resource_name": "aws_codebuild_project",
+            "rule_id": 29,
+            "user_email": "some.cpsc319.test@gmail.com"
+        }
+    ],
+    "date": "11/25/2021, 5:24:50 PM",
+    "prURL": "https://github.com/CPSC-319/yaml-rules-and-terraform-violations/pull/50",
+    "username": "marquesarthur",
+    "filepath": "/mnt/repos/yaml-rules-and-terraform-violations_general-t2_1637889884402/general/ensure-that-codebuild-projects-are-encrypted.test.tf",
+    "resFilePath": "/mnt/repos/yaml-rules-and-terraform-violations_general-t2_1637889884402/general/ensure-that-codebuild-projects-are-encrypted.test.tf-result.json"
+}

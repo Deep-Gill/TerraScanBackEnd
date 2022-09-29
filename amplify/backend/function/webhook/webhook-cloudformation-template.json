@@ -52,9 +52,8 @@
             "sg-0f44c695f780ceb41"
           ],
           "SubnetIds": [
-            "subnet-0a8ddcf779890bb25",
-            "subnet-007d8382c1f0173a6",
-            "subnet-042c96af254ed4864"
+            "subnet-0ff2b1da418a0e796",
+            "subnet-031fafaacc9a63c74"
           ]
         },
         "FileSystemConfigs": [
@@ -119,7 +118,9 @@
           ]
         },
         "Runtime": "nodejs14.x",
-        "Layers": [],
+        "Layers": [
+          "arn:aws:lambda:us-east-2:553035198032:layer:git-lambda2:8"
+        ],
         "Timeout": 25
       }
     },

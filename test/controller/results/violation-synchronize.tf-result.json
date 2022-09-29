@@ -1,0 +1,39 @@
+{
+    "status": "VIOLATION",
+    "results": [],
+    "resultsFixed": [
+        {
+            "repo_name": "CPSC-319/TerraScanTestData",
+            "pull_url": "https://github.com/CPSC-319/TerraScanTestData/pull/41",
+            "file_path": "/mnt/repos/CPSC-319_TerraScanTestData_41/files/demo/violation.tf",
+            "line_number": 1,
+            "resource_desc": "testViol1",
+            "resource_name": "aws_transfer_server",
+            "rule_id": 10,
+            "rule_desc": "Ensure Transfer Server is not exposed publicly",
+            "user_email": "leannsc0@gmail.com",
+            "fixed": true,
+            "violation_id": 1130,
+            "commit_sha": "6cb4e5f83db70e7c71bcf6e64ac6b79e450d8092"
+        },
+        {
+            "repo_name": "CPSC-319/TerraScanTestData",
+            "pull_url": "https://github.com/CPSC-319/TerraScanTestData/pull/41",
+            "file_path": "/mnt/repos/CPSC-319_TerraScanTestData_41/files/demo/violation.tf",
+            "line_number": 1,
+            "resource_desc": "testViol1",
+            "resource_name": "aws_transfer_server",
+            "rule_id": 166,
+            "rule_desc": "ensure-transfer-server-is-not-exposed-publicly.yaml",
+            "user_email": "leannsc0@gmail.com",
+            "fixed": true,
+            "violation_id": 1131,
+            "commit_sha": "6cb4e5f83db70e7c71bcf6e64ac6b79e450d8092"
+        }
+    ],
+    "date": "12/1/2021, 8:10:22 PM",
+    "prURL": "https://github.com/CPSC-319/TerraScanTestData/pull/41",
+    "username": "learese",
+    "filepath": "/mnt/repos/CPSC-319_TerraScanTestData_41/files/demo/violation.tf",
+    "resFilePath": "/mnt/repos/CPSC-319_TerraScanTestData_41/results/demo/violation.tf-result.json"
+}

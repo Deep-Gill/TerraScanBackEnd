@@ -24,19 +24,23 @@
       "Type": "String",
       "Default": "functionterrascanbackendcontrollerLayerArn"
     },
-    "pguser": {
+    "functionterrascanbackendlayerArn": {
+      "Type": "String",
+      "Default": "functionterrascanbackendlayerArn"
+    },
+    "PGUSER": {
       "Type": "String"
     },
-    "pghost": {
+    "PGHOST": {
       "Type": "String"
     },
-    "pgpassword": {
+    "PGPASSWORD": {
       "Type": "String"
     },
-    "pgport": {
+    "PGPORT": {
       "Type": "String"
     },
-    "pgdatabase": {
+    "PGDATABASE": {
       "Type": "String"
     }
   },
@@ -71,7 +75,6 @@
             "sg-0f44c695f780ceb41"
           ],
           "SubnetIds": [
-            "subnet-0a8ddcf779890bb25",
             "subnet-0ff2b1da418a0e796",
             "subnet-031fafaacc9a63c74"
           ]
@@ -112,20 +115,20 @@
             "FUNCTION_AGENTLAMBDA_NAME": {
               "Ref": "functionagentLambdaName"
             },
-            "pguser": {
-              "Ref": "pguser"
+            "PGUSER": {
+              "Ref": "PGUSER"
             },
-            "pghost": {
-              "Ref": "pghost"
+            "PGHOST": {
+              "Ref": "PGHOST"
             },
-            "pgpassword": {
-              "Ref": "pgpassword"
+            "PGPASSWORD": {
+              "Ref": "PGPASSWORD"
             },
-            "pgport": {
-              "Ref": "pgport"
+            "PGPORT": {
+              "Ref": "PGPORT"
             },
-            "pgdatabase": {
-              "Ref": "pgdatabase"
+            "PGDATASE": {
+              "Ref": "PGDATASE"
             }
           }
         },
@@ -136,13 +139,12 @@
           ]
         },
         "Runtime": "nodejs14.x",
+        "Timeout": 300,
         "Layers": [
-          "arn:aws:lambda:us-east-2:553035198032:layer:git-lambda2:8",
           {
-            "Ref": "functionterrascanbackendcontrollerLayerArn"
+            "Ref": "functionterrascanbackendlayerArn"
           }
-        ],
-        "Timeout": 300
+        ]
       }
     },
     "LambdaExecutionRole": {

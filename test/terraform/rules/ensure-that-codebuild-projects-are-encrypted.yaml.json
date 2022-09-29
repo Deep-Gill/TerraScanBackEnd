@@ -1,1 +1,0 @@
-{"rule_id":"fb03959c-5ec1-44d1-9653-f9320d94972c","rule":{"resource":"aws_codebuild_project","severity":"MEDIUM","category":"GENERAL","has":[{"key":"encryption_key"}]}}

@@ -12,8 +12,10 @@
         "webhook:install": "cd amplify/backend/function/webhook/src/ && yarn install",
         "restRoot": "node amplify/backend/function/restRoot/src/app.js",
         "restRoot:install": "cd amplify/backend/function/restRoot/src/ && yarn install",
+        "layer:install": "cd amplify/backend/function/terrascanbackendlayer/lib/nodejs && yarn install",
         "test": "nyc --reporter=html mocha --reporter mochawesome test/**/*.spec.js --exit",
         "testParse": "mocha test/terraform/parsing.spec.js --exit",
+        "testController": "mocha test/controller/*.spec.js --exit",
         "testValidate": "mocha test/terraform/validating.spec.js --exit",
         "email:mock:harry": "amplify mock function emailLambda --event src/event-harry.json",
         "email:mock:bolin": "amplify mock function emailLambda --event src/event-bolin.json"
@@ -34,6 +36,7 @@
         "eslint": "^7.32.0"
     },
     "dependencies": {
+        "axios": "^0.24.0",
         "chai": "^4.3.4",
         "chai-as-promised": "^7.1.1",
         "chai-http": "^4.3.0",

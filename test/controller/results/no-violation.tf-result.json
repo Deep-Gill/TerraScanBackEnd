@@ -1,0 +1,10 @@
+{
+    "status": "NOVIOLATION",
+    "results": [],
+    "resultsFixed": [],
+    "date": "11/12/2021, 8:16:47 PM",
+    "prURL": "https://github.com/CPSC-319/TerraScanTestData/pull/10",
+    "username": "learese",
+    "filepath": "/mnt/repos/CPSC-319_TerraScanTestData_23/files/modifiedData/subDir1/api_gateway_resources.tf",
+    "resFilePath": "/mnt/repos/CPSC-319_TerraScanTestData_23/results/modifiedData/subDir1/api_gateway_resources.tf-result.json"
+}

@@ -95,14 +95,19 @@ app.post('/apiWebhook/ghEvent', async (req, res) => {
 
 
     const ghEvent = req.headers['x-github-event']
-    if (
-        !Object.values(ACCEPTED_GITHUB_EVENTS).includes(ghEvent) ||
-        !Object.values(ACCEPTED_GITHUB_EVENT_ACTIONS).includes(action)
-    ) {
+    if (!Object.values(ACCEPTED_GITHUB_EVENTS).includes(ghEvent)) {
         res.status(HTTPCode.BAD_REQUEST)
-        res.json(errorResponse('UNSUPPORTED_EVENTS_OR_ACTIONS'))
+        res.json(errorResponse('UNSUPPORTED_EVENTS'))
         return
     }
+
+    // Send 200 for unsupported events such as closing Pull Request. This avoids confusions on the sender
+    if (!Object.values(ACCEPTED_GITHUB_EVENT_ACTIONS).includes(action)) {
+        res.status(HTTPCode.OK)
+        res.json(errorResponse('UNSUPPORTED_ACTIONS'))
+        return
+    }
+    
     console.log('ghEvent: Detected a New PR')
 
     try {
@@ -152,7 +157,7 @@ app.post('/apiWebhook/ghEvent', async (req, res) => {
 
         // https://stackoverflow.com/q/35754766/16961611
         const params = {
-            FunctionName: 'controllerLambda-dev',
+            FunctionName: `controllerLambda-${process.env.ENV}`,
             InvocationType: 'Event',
             Payload: JSON.stringify(prSummary),
         }

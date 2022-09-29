@@ -8,22 +8,46 @@
     "webhook": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "Lambda",
+      "dependsOn": []
     },
     "controllerLambda": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "terrascanbackendlayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ]
     },
     "agentLambda": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "terrascanbackendlayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ]
     },
     "emailLambda": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "terrascanbackendlayer": {
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer",
+      "build": true
     }
   },
   "api": {

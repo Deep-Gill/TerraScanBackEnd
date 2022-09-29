@@ -1,0 +1,6 @@
+resource: aws_codebuild_project
+description: "this is a test"
+severity: MEDIUM
+category: GENERAL
+has:
+  - key: "encryption_key"

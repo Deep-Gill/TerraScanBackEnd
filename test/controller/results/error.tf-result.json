@@ -1,0 +1,11 @@
+{
+    "status": "ERROR",
+    "errorMessage": "No Resources found in terraform file",
+    "results": [],
+    "resultsFixed": [],
+    "date": "11/29/2021, 8:16:46 PM",
+    "prURL": "https://github.com/CPSC-319/TerraScanTestData/pull/23",
+    "username": "learese",
+    "filepath": "/mnt/repos/CPSC-319_TerraScanTestData_23/files/data/data.tf",
+    "resFilePath": "/mnt/repos/CPSC-319_TerraScanTestData_23/results/data/data.tf-result.json"
+}

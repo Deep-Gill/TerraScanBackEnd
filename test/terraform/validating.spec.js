@@ -18,8 +18,7 @@ let event = {
         url: '',
         branch: '',
         repoName: 'TerraScanTestData',
-        repoPath: __dirname,
-        commit_sha: 'a0d0n20fndf'
+        repoPath: __dirname
     },
     filePath: '',
     fileName: ''
@@ -1732,8 +1731,12 @@ describe('validating the rules', () => {
                         const status = json.status
                         expect(ret).to.deep.equal(true)
                         expect(status).to.deep.equal('VIOLATION')
-                        expect(result.length).to.deep.equal(0)
+                        expect(result.length).to.deep.equal(1)
                         expect(resultsFixed.length).to.deep.equal(2)
+                        expect(result[0].resource_name).to.deep.equal('aws_athena_workgroup')
+                        expect(result[0].resource_desc).to.deep.equal('test2')
+                        expect(result[0].line_number).to.deep.equal(1)
+                        expect(result[0].fixed).to.deep.equal(false)
                         expect(resultsFixed[0].resource_name).to.deep.equal('aws_athena_workgroup')
                         expect(resultsFixed[0].resource_desc).to.deep.equal('test')
                         expect(resultsFixed[0].line_number).to.deep.equal(1)

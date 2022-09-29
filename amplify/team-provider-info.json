@@ -15,7 +15,7 @@
       "function": {
         "restRoot": {
           "deploymentBucketName": "amplify-terrascanbackend-dev-183832-deployment",
-          "s3Key": "amplify-builds/restRoot-7463596b37692b464f56-build.zip",
+          "s3Key": "amplify-builds/restRoot-56677459493567346f46-build.zip",
           "pguser": "postgres",
           "pghost": "database-1.c0q2fddhib6j.us-east-2.rds.amazonaws.com",
           "pgpassword": "CQ!$Yn5RjYh?S6?&",
@@ -25,7 +25,7 @@
         },
         "webhook": {
           "deploymentBucketName": "amplify-terrascanbackend-dev-183832-deployment",
-          "s3Key": "amplify-builds/webhook-7677713465594b673253-build.zip",
+          "s3Key": "amplify-builds/webhook-466f7a4d4d446e574448-build.zip",
           "ghPersonalAccessToken": "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",
           "efsPath": "/mnt/repos",
           "isRemote": "true",
@@ -33,27 +33,28 @@
         },
         "agentLambda": {
           "deploymentBucketName": "amplify-terrascanbackend-dev-183832-deployment",
-          "s3Key": "amplify-builds/agentLambda-324d43785a34714e4553-build.zip"
+          "s3Key": "amplify-builds/agentLambda-5157623368444a4f4d42-build.zip"
         },
         "controllerLambda": {
           "deploymentBucketName": "amplify-terrascanbackend-dev-183832-deployment",
-          "s3Key": "amplify-builds/controllerLambda-7661345a38774562646a-build.zip",
-          "pguser": "postgres",
-          "pghost": "database-1.c0q2fddhib6j.us-east-2.rds.amazonaws.com",
-          "pgpassword": "CQ!$Yn5RjYh?S6?&",
+          "s3Key": "amplify-builds/controllerLambda-3575736f4b4951563742-build.zip",
+          "PGUSER": "postgres",
+          "PGHOST": "database-1.c0q2fddhib6j.us-east-2.rds.amazonaws.com",
+          "PGPASSWORD": "CQ!$Yn5RjYh?S6?&",
+          "PGPORT": "5432",
+          "PGDATABASE": "terrascan_testing",
+          "env": "dev",
           "pgport": "5432",
+          "pgpassword": "CQ!$Yn5RjYh?S6?&",
+          "pguser": "postgres",
           "pgdatabase": "terrascan_testing",
-          "env": "dev"
+          "pghost": "database-1.c0q2fddhib6j.us-east-2.rds.amazonaws.com"
         },
         "emailLambda": {
           "appLink": "https://production.d2u2qvge5tymuq.amplifyapp.com/",
           "emailSender": "notification@terrascan.top",
           "deploymentBucketName": "amplify-terrascanbackend-dev-183832-deployment",
-          "s3Key": "amplify-builds/emailLambda-5a77623668326e4c4a35-build.zip"
-        },
-        "terrascanbackendcontrollerLayer": {
-          "deploymentBucketName": "amplify-terrascanbackend-dev-183832-deployment",
-          "s3Key": "amplify-builds/terrascanbackendcontrollerLayer-LambdaLayerVersion32e1a5c7-build.zip"
+          "s3Key": "amplify-builds/emailLambda-476d3045396d396d5563-build.zip"
         }
       }
     }

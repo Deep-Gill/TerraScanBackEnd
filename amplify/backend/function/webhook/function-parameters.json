@@ -1,5 +1,10 @@
 {
-  "lambdaLayers": [],
+  "lambdaLayers": [
+    {
+      "type": "ExternalLayer",
+      "arn": "arn:aws:lambda:us-east-2:553035198032:layer:git-lambda2:8"
+    }
+  ],
   "environmentVariableList": [
     {
       "cloudFormationParameterName": "ghPersonalAccessToken",

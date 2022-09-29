@@ -3,7 +3,6 @@ const path = require('path')
 
 const { shHelper } = require('../sh')
 const { ACCEPTED_GITHUB_EVENT_ACTIONS } = require('../github')
-const { errorResponse } = require('../util')
 
 class PullRequestHelper {
     /**
@@ -38,7 +37,8 @@ class PullRequestHelper {
             fs.rmdirSync(pathStr, { recursive: true })
             console.log(`gitClone: Overridden path ${pathStr}`)
         } else if (directoryExists) {
-            throw new Error(errorResponse('PULL_REQUEST_FOLDER_ALREADY_EXISTS').message)
+            console.log(`gitClone: Duplicated Pull Request Folder found at path ${pathStr}. No Action Taken.`)
+            return
         }
 
         // EFS does not create a folder automatically. Must create it first.

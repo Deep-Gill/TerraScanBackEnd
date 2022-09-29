@@ -2,7 +2,7 @@
   "lambdaLayers": [
     {
       "type": "ProjectLayer",
-      "resourceName": "terrascanbackendcontrollerLayer",
+      "resourceName": "terrascanbackendlayer",
       "env": "dev",
       "version": "Always choose latest version",
       "isLatestVersionSelected": true

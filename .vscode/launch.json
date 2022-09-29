@@ -1,0 +1,47 @@
+{
+    "configurations": [
+    
+
+        {
+            "command": "yarn run webhook",
+            "name": "Debug Webhook",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "yarn test",
+            "name": "Debug Tests",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Terraform Parser",
+            "cwd": "${workspaceRoot}/terraform",
+            "program": "${workspaceRoot}/terraform/index.js",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "JSON File Adder",
+            "cwd": "${workspaceRoot}/test/terraform/json_rules",
+            "program": "${workspaceRoot}/test/terraform/json_rules/getFiles.js",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Mocha (Test single file)",
+            "type": "node",
+            "request": "launch",
+            "runtimeArgs": [
+                "${workspaceRoot}/node_modules/.bin/mocha",
+                "--inspect-brk",
+                "${workspaceRoot}/test/terraform/validating.spec.js"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229
+        }
+    ]
+}

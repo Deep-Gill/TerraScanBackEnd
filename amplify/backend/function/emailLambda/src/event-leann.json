@@ -1,0 +1,41 @@
+{
+    "prInfo": {
+      "user": "HryChg",
+      "url": "https://github.com/CPSC-319/TerraScanTestData/pull/5",
+      "branch": "General-t1-Synchronized",
+      "repoName": "CPSC-319/TerraScanTestData",
+      "localPath": "/mnt/repos/CPSC-319_TerraScanTestData_5/files",
+      "commit_sha": "4aee1921d50764c6430e7af64dd81e2b3345f60c",
+      "gitEvent": "synchronize",
+      "userEmail": "hanchangchuang@gmail.com",
+      "repoPath": "/mnt/repos/CPSC-319_TerraScanTestData_5"
+    },
+    "jobSummaryInfo": {
+      "failedJobs": [],
+      "violationJobs": [],
+      "noViolationJobs": [],
+      "noResultJobs": [
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/arthur/general/ensure-that-athena-workgroup-is-encrypted.test.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/data/certificate.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/data/data.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/data/main.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/data/outputs.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/data/subDir1/api_gateway_config.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/data/subDir1/api_gateway_resources.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/data/subDir2/permissions.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/data/subDir2/route53.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/data/subDir2/variables.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/modifiedData/certificate.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/modifiedData/data.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/modifiedData/main.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/modifiedData/outputs.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/modifiedData/subDir1/api_gateway_config.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/modifiedData/subDir1/api_gateway_resources.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/modifiedData/subDir2/permissions.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/modifiedData/subDir2/route53.tf",
+        "/mnt/repos/CPSC-319_TerraScanTestData_5/results/modifiedData/subDir2/variables.tf"
+      ],
+      "fixedJobs": []
+    }
+  }
+  
